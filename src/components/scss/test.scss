@@ -1,0 +1,109 @@
+
+
+
+.test{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+
+    .speed{
+        position: absolute;
+        bottom: 15%;
+        left: 2%;
+        font-size: 1rem;
+    }
+
+    .turnDist{
+        position: absolute;
+        bottom: 22%;
+        left: 2%;
+    }
+
+
+    .dest{
+        position: absolute;
+        top: 5%;
+        right: 5%;
+        //background-color: red;
+        width: 40%;
+        height: 10%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        input{
+            padding: 5%;
+            width: 70%;
+            height: 40%;
+            border-bottom-left-radius: 5px;
+            border-top-left-radius: 5px;
+        }
+        button{
+            padding: 3.7%;
+            border-bottom-right-radius: 5px;
+            border-top-right-radius: 5px;
+            cursor: pointer;
+        }
+    }
+
+    .me{
+        position: absolute;
+        bottom: 7%;
+        right: 5%;
+        width: 10%;
+        height: 10%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        button{
+            padding: 10%;
+            border-radius: 50px;
+            background-color: red;
+            color: white;
+            cursor: pointer;
+        }
+    }
+
+        .tester {
+        position: absolute;
+        top: 10%;
+        left: 3%;
+        width: 300px;
+        background: rgba(0, 0, 0, 0.85);
+        color: white;
+        padding: 15px;
+        border-radius: 10px;
+
+        .btns {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .start {
+            width: 100%;
+            margin-top: 10px;
+            padding: 10px;
+            cursor: pointer;
+        }
+        }
+
+
+}
+
+
+@media (max-width :767px) {
+    .test{
+        .dest{
+            //background-color: red;
+            width: 90%;
+            justify-content: center;
+            align-items: center;
+            button{
+                padding: 3%;
+            }
+        }
+        .me{
+            width: 40%;
+        }
+    }
+}

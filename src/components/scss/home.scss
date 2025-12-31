@@ -1,0 +1,171 @@
+
+
+.home{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+
+    .speed{
+        position: absolute;
+        bottom: 7%;
+        left: 2%;
+        height: 10%;
+        width: 20%;
+        background-color: #1d1c1c;
+        color: whitesmoke;
+        border-radius: 0 0 10px 10px;
+        filter: opacity(80%);
+        transition: 0.2s ease-in-out;
+        &:hover{
+            background-color: #000000;
+        }
+        h2{
+            height: 100%;
+            width: 100%;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bolder;
+            font-size: 1.5rem;
+            //background-color: red;
+            text-align: left;
+            padding: 5%;
+            span{
+                font-size: 1rem;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .turnDist{
+        position: absolute;
+        bottom: 17%;
+        left: 2%;
+        height: 14%;
+        width: 20%;
+        border-radius: 10px 10px 0 0;
+        //padding: 2%;
+        //background-color: green;
+        background-color: #1d1c1c;
+        filter: opacity(80%);
+        transition: 0.2s ease-in-out;
+        &:hover{
+            background-color: #000000;
+        }
+        h2,h3,p{
+            //background-color: red;
+            width: 100%;
+            height: 33.33%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        h2{
+            padding: 5% 10% 0 5%;
+            //background-color: red;
+        }
+        h3{
+            padding: 0 10% 0 5%;
+        }
+        p{
+            padding: 0 10% 5% 5%;
+        }
+    }
+
+
+    .dest{
+        position: absolute;
+        top: 5%;
+        right: 5%;
+        //background-color: red;
+        width: 40%;
+        height: 10%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        input{
+            padding: 5%;
+            width: 70%;
+            height: 40%;
+            border-bottom-left-radius: 5px;
+            border-top-left-radius: 5px;
+            border: none;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 1rem;
+            &:focus{
+                outline: none;
+            }
+        }
+        button{
+            padding: 3.7%;
+            border-bottom-right-radius: 5px;
+            border-top-right-radius: 5px;
+            cursor: pointer;
+            border: none;
+            background-color: #0F9D58;
+            color: #84ebb9;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1rem;
+            transition: 0.2s ease-in-out;
+            &:hover{
+                background-color: #056b3a;
+                color: #d2ffe9;
+            }
+        }
+    }
+
+    .me{
+        position: absolute;
+        bottom: 7%;
+        right: 5%;
+        width: 10%;
+        height: 10%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        button{
+            padding: 15%;
+            border-radius: 50px;
+            background-color: #4285F4;
+            color: #aacafd;
+            cursor: pointer;
+            border: none;
+            transition: 0.2s ease-in-out;
+            h5{
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-size: 1.5rem;
+            }
+            &:hover{
+            background-color: #0c5bda;
+            color: #c3d1e8;            
+            }
+        }
+    }
+
+}
+
+
+@media (max-width :767px) {
+    .home{
+        .speed{
+            width: 50%;
+        }
+        .turnDist{
+            width: 50%;
+            h2,h3,p{
+                font-size: 1rem;
+            }
+        }
+        .dest{
+            //background-color: red;
+            width: 90%;
+            justify-content: center;
+            align-items: center;
+            button{
+                padding: 3%;
+            }
+        }
+        .me{
+            width: 40%;
+        }
+    }
+}
