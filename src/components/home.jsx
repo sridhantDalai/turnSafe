@@ -15,13 +15,13 @@ const containerStyle = {
 const FALLBACK_LOCATION = { lat: 20.5937, lng: 78.9629 };
 const LOCKED_ZOOM = 15;
 
-// 🧠 SPEED FILTER CONSTANTS
+// speed
 const MIN_MOVE_METERS = 1.5;
 const MIN_TIME_SEC = 1;
 const SPEED_SMOOTHING = 0.2;
 const STOP_SPEED = 2;
 
-// 🚗 GLOBAL SPEED LIMIT
+// globals
 const MAX_NORMAL_SPEED = 80;
 
 export default function Home() {
@@ -42,7 +42,7 @@ export default function Home() {
   const lastRouteOrigin = useRef(null);
   const routeErrorShown = useRef(false);
 
-  // 🗺️ MAP REFS
+  // MAP REFS
   const mapRef = useRef(null);
   const hasCenteredOnce = useRef(false);
 
@@ -50,7 +50,7 @@ export default function Home() {
     googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
   });
 
-  // 📍 GEOLOCATION + SPEED
+  // geolocation
   useEffect(() => {
     if (!navigator.geolocation) return;
 
@@ -97,7 +97,7 @@ export default function Home() {
     return () => navigator.geolocation.clearWatch(watchId);
   }, []);
 
-  // 🧭 ROUTE FETCH
+  // route
   useEffect(() => {
     if (!isLoaded || !location || !destination) return;
 
@@ -130,7 +130,7 @@ export default function Home() {
     );
   }, [isLoaded, location, destination]);
 
-  // 🚦 TURN SPEED LOGIC
+  // turn logic
   useEffect(() => {
     if (!directions || !location) return;
 
@@ -179,13 +179,13 @@ export default function Home() {
     }
   }, [directions, location, speed]);
 
-  // 🗺️ FOLLOW USER
+  // follow
   useEffect(() => {
     if (!mapRef.current || !location || !hasCenteredOnce.current) return;
     mapRef.current.panTo(location);
   }, [location]);
 
-  // 🎯 DESTINATION
+  // destination
   const handleGo = () => {
     if (!isLoaded || !destInput.trim()) return;
 
@@ -201,7 +201,7 @@ export default function Home() {
     });
   };
 
-  // 📍 ME BUTTON → CENTER + ZOOM
+  // me button
   const handleMeClick = () => {
     if (!mapRef.current || !location) return;
     mapRef.current.panTo(location);
@@ -283,7 +283,6 @@ export default function Home() {
   );
 }
 
-/* ================= HELPERS ================= */
 
 function distance(lat1, lon1, lat2, lon2) {
   const R = 6371000;
